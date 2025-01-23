@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    
+    <form method="POST">
+        <label for="number">Enter a number:</label>
+        <input type="text" name="number" required>
+        <br><br>
+        
+        <button type="submit" name="prime">Check Prime</button>
+        <button type="submit" name="fibonacci">Generate Fibonacci</button>
+        <button type="submit" name="cube_root">Find Cube Root</button>
+        <button type="submit" name="palindrome">Check Palindrome</button>
+    </form>
+
+    {% if prime_result is not none %}
+        <h2>Prime Check: {{ prime_result }}</h2>
+    {% endif %}
+
+    {% if fibonacci_result is not none %}
+        <h2>Fibonacci Series: {{ fibonacci_result }}</h2>
+    {% endif %}
+
+    {% if cube_root_result is not none %}
+        <h2>Cube Root: {{ cube_root_result }}</h2>
+    {% endif %}
+
+    {% if palindrome_result is not none %}
+        <h2>Palindrome Check: {{ palindrome_result }}</h2>
+    {% endif %}
+</body>
+</html>
